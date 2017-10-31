@@ -1,0 +1,49 @@
+/* Normalize */
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+p {
+  margin: 0;
+}
+
+
+/* Layout */
+.cabecalho {
+  background-color: blue;
+}
+
+.conteudo-principal {
+  background: red;
+}
+
+.menu-lateral {
+  background: green;
+}
+
+.rodape {
+  background: yellow;
+  clear: both;
+}
+
+
+/* Media Queries */
+@media(min-width: 768px) {
+  .conteudo-principal {
+    float: left;
+    width: 60%;
+    height: 80%;
+  }
+  
+  .menu-lateral {
+    float: right;
+    width: 40%;
+  }
+}
