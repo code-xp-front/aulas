@@ -1,0 +1,22 @@
+.cabecalho {
+    display: table;
+    background: red;
+}
+
+.logo, .links, .menu-hamburguer {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.logo {
+    width: 100px;
+}
+
+.links {
+    width: 100%;
+    text-align: center;
+}
+
+.links li {
+    display: inline;
+}
