@@ -1,0 +1,20 @@
+/* não funciona porque o parágrafo deveria ser a primeira tag filha da seção*/
+p:first-child {
+    color: red;
+}
+  
+/* não funciona porque o parágrafo deveria ser a última tag filha da seção*/
+p:last-child {
+    color: green;
+}
+
+/* podemos usar outras pseudoclasses: */
+/* o first-of-type seleciona o primeiro parágrafo, a primeira tag do tipo parágrafo */
+p:first-of-type {
+    color: red;
+}
+
+/* o seletor last-of-type seleciona a última tag do tipo parágrafo que seja filha da seção */
+p:last-of-type {
+    color: green;
+}
