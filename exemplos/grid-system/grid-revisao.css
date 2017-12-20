@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+
+.row {
+    width: 100%;
+    border: 3px solid red;
+    overflow: hidden; /* controla o efeito de float */
+}
+
+/* controla o efeito de float 
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}  */
+
+/* 
+ * SOLUÇÃO COM FLOAT - alinamento vertical 
+ * das colunas é automático 
+*/
+[class *= 'col-']{
+    float:left;
+    text-align: center; /* opcional */
+}
+
+/* SOLUÇÃO COM inline-block 
+[class *= 'col-']{
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+}*/
+
+/* GUTTER - espaçamento entre as colunas */
+[class *= 'col-']{
+    padding: 5px; /* gutter */
+}
+
+/* COLUNAS - MOBILE FIRST */
+.col-cl-1 { width: calc(100% / 12) }
+.col-cl-2 { width: calc((100% / 12) * 2) }
+.col-cl-3 { width: calc((100% / 12) * 3) }
+.col-cl-4 { width: calc((100% / 12) * 4) }
+.col-cl-5 { width: calc((100% / 12) * 5) }
+.col-cl-6 { width: calc((100% / 12) * 6) }
+.col-cl-7 { width: calc((100% / 12) * 7) }
+.col-cl-8 { width: calc((100% / 12) * 8) }
+.col-cl-9 { width: calc((100% / 12) * 9) }
+.col-cl-10 { width: calc((100% / 12) * 10) }
+.col-cl-11 { width: calc((100% / 12) * 11) }
+.col-cl-12 { width: calc((100% / 12) * 12) }
+
+/* DESLOCAMENTO DE COLUNAS MOBILE FIRST - offset */
+.col-cl-offset-1 { margin-left: calc(100% / 12) }
+.col-cl-offset-2 { margin-left: calc((100% / 12) * 2) }
+.col-cl-offset-3 { margin-left: calc((100% / 12) * 3) }
+.col-cl-offset-4 { margin-left: calc((100% / 12) * 4) }
+.col-cl-offset-5 { margin-left: calc((100% / 12) * 5) }
+.col-cl-offset-6 { margin-left: calc((100% / 12) * 6) }
+.col-cl-offset-7 { margin-left: calc((100% / 12) * 7) }
+.col-cl-offset-8 { margin-left: calc((100% / 12) * 8) }
+.col-cl-offset-9 { margin-left: calc((100% / 12) * 9) }
+.col-cl-offset-10 { margin-left: calc((100% / 12) * 10) }
+.col-cl-offset-11 { margin-left: calc((100% / 12) * 11) }
+.col-cl-offset-12 { margin-left: calc((100% / 12) * 12) }
+
+/* caso haja a necessidade de inserir anúncios 
+ * ou alguma sidebar, não faz sentido que seja exibida no mobile 
+ */
+.sidebar{
+    display: none;
+}
+
+/******************************** MEDIAS ********************************/
+
+/* TABLETS */
+@media screen  and (min-width: 768px){
+    
+    .col-tb-1 { width: calc(100% / 12) }
+    .col-tb-2 { width: calc((100% / 12) * 2) }
+    .col-tb-3 { width: calc((100% / 12) * 3) }
+    .col-tb-4 { width: calc((100% / 12) * 4) }
+    .col-tb-5 { width: calc((100% / 12) * 5) }
+    .col-tb-6 { width: calc((100% / 12) * 6) }
+    .col-tb-7 { width: calc((100% / 12) * 7) }
+    .col-tb-8 { width: calc((100% / 12) * 8) }
+    .col-tb-9 { width: calc((100% / 12) * 9) }
+    .col-tb-10 { width: calc((100% / 12) * 10) }
+    .col-tb-11 { width: calc((100% / 12) * 11) }
+    .col-tb-12 { width: calc((100% / 12) * 12) }
+}
+
+/* DESKTOP */
+@media screen  and (min-width: 992px){
+
+    .col-dk-1 { width: calc(100% / 12) }
+    .col-dk-2 { width: calc((100% / 12) * 2) }
+    .col-dk-3 { width: calc((100% / 12) * 3) }
+    .col-dk-4 { width: calc((100% / 12) * 4) }
+    .col-dk-5 { width: calc((100% / 12) * 5) }
+    .col-dk-6 { width: calc((100% / 12) * 6) }
+    .col-dk-7 { width: calc((100% / 12) * 7) }
+    .col-dk-8 { width: calc((100% / 12) * 8) }
+    .col-dk-9 { width: calc((100% / 12) * 9) }
+    .col-dk-10 { width: calc((100% / 12) * 10) }
+    .col-dk-11 { width: calc((100% / 12) * 11) }
+    .col-dk-12 { width: calc((100% / 12) * 12) }
+
+    .sidebar{
+        display: block;
+        
+    }
+}
+
+/* LELAS LARGAS */
+@media screen  and (min-width: 1200px){
+    
+    .col-lg-1 { width: calc(100% / 12) }
+    .col-lg-2 { width: calc((100% / 12) * 2) }
+    .col-lg-3 { width: calc((100% / 12) * 3) }
+    .col-lg-4 { width: calc((100% / 12) * 4) }
+    .col-lg-5 { width: calc((100% / 12) * 5) }
+    .col-lg-6 { width: calc((100% / 12) * 6) }
+    .col-lg-7 { width: calc((100% / 12) * 7) }
+    .col-lg-8 { width: calc((100% / 12) * 8) }
+    .col-lg-9 { width: calc((100% / 12) * 9) }
+    .col-lg-10 { width: calc((100% / 12) * 10) }
+    .col-lg-11 { width: calc((100% / 12) * 11) }
+    .col-lg-12 { width: calc((100% / 12) * 12) }
+
+    .container{
+        max-width: 1200px;
+    }
+}
+
+
+
+
+
+.fundo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 15px 0;
+    background: purple;
+}
+
