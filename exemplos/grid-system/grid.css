@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.show-tablet {
+    display: none;
+}
+
+.show-desktop {
+    display: none;
+}
+
+
+/* CONTAINER */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/*LINHAS */
+.row {
+    position: relative;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* COLUNAS */
+.col-mb-1 {
+    width: calc((100% / 5) * 1);
+}
+
+.col-mb-2 {
+    width: calc((100% / 5) * 2);
+}
+
+.col-mb-3 {
+    width: calc((100% / 5) * 3);
+}
+
+.col-mb-4 {
+    width: calc((100% / 5) * 4);
+}
+
+.col-mb-5 {
+    width: calc((100% / 5) * 5);
+}
+
+
+@media(min-width: 768px) {
+    .show-tablet {
+        display: block;
+    }
+
+    .col-tb-1 {
+        width: calc((100% / 9) * 1);
+    }
+
+    .col-tb-2 {
+        width: calc((100% / 9) * 2);
+    }
+
+    .col-tb-3 {
+        width: calc((100% / 9) * 3);
+    }
+
+    .col-tb-4 {
+        width: calc((100% / 9) * 4);
+    }
+
+    .col-tb-5 {
+        width: calc((100% / 9) * 5);
+    }
+
+    .col-tb-6 {
+        width: calc((100% / 9) * 6);
+    }
+
+    .col-tb-7 {
+        width: calc((100% / 9) * 7);
+    }
+
+    .col-tb-8 {
+        width: calc((100% / 9) * 8);
+    }
+
+    .col-tb-9 {
+        width: calc((100% / 9) * 9);
+    }
+
+
+    /* OFFSET */
+    .col-tb-offset-1 {
+        margin-left: calc((100% / 9) * 1);
+    }
+}
+
+
+@media(min-width: 992px) {
+    .show-desktop {
+        display: block;
+    }
+
+    .col-ds-1 {
+        width: calc((100% / 12) * 1);
+    }
+
+    .col-ds-2 {
+        width: calc((100% / 12) * 2);
+    }
+
+    .col-ds-3 {
+        width: calc((100% / 12) * 3);
+    }
+
+    .col-ds-4 {
+        width: calc((100% / 12) * 4);
+    }
+
+    .col-ds-5 {
+        width: calc((100% / 12) * 5);
+    }
+
+    .col-ds-6 {
+        width: calc((100% / 12) * 6);
+    }
+
+    .col-ds-7 {
+        width: calc((100% / 12) * 7);
+    }
+
+    .col-ds-8 {
+        width: calc((100% / 12) * 8);
+    }
+
+    .col-ds-9 {
+        width: calc((100% / 12) * 9);
+    }
+
+    .col-ds-10 {
+        width: calc((100% / 12) * 10);
+    }
+
+    .col-ds-11 {
+        width: calc((100% / 12) * 11);
+    }
+
+    .col-ds-12 {
+        width: calc((100% / 12) * 12);
+    }
+
+    /* OFFSET */
+    .col-tb-offset-1 {
+        margin-left: 0;
+    }
+}
+
+
+/* GUTTER */
+[class*="col-"] {
+    float: left;
+    padding: 0 1rem;
+}
+
+
+.news__icon {
+    height: 200px;
+    max-width: 100%;
+}
