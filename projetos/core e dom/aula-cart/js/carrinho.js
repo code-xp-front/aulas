@@ -54,6 +54,7 @@ function listarProdutos(){
  //Gerar o template através do array de objetos
     var template = "";
     
+    
     for(var i = 0; i < produtos.length; i++){
         console.log( produtos[i] );
         template += '<div class="product">';
