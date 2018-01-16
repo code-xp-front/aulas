@@ -86,17 +86,16 @@ function atualizarQuantidade(_codigo, _qtd){
             
             //atualizar o total do produto
             var novoTotal = parseFloat(produtos[index].qtd * produtos[index].preco);
-            console.log(novoTotal);
             var codProd = 'total-' + produtos[index].codigo;
             var totalAntigo = document.getElementById(codProd).innerHTML;
-            console.log(totalAntigo);
+            //(TOTAL-GERAL - TOTAL-PRODUTO-ANTIGO) + NOVO-TOTAL-PRODUTO
             totalGeral = (totalGeral - totalAntigo) + novoTotal;
             
             document.getElementById(codProd).innerHTML = novoTotal.toFixed(2);
             //atualizar o total geral
             document.getElementById('total-geral').innerHTML = totalGeral.toFixed(2);
             
-            //(TOTAL-GERAL - TOTAL-PRODUTO-ANTIGO) + NOVO-TOTAL-PRODUTO
+            
 
 
             

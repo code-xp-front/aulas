@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="linha">
+    <div class="esquerda">
+        <h3>Shipping Address</h3>
+        <form action="">
+    <select class="inputs"  name="input_country" id="selection_country" >
+        <option value="0">Select</option>
+        <option value="1">Brasil</option>
+        <option value="2">USA</option>
+    </select>
+    <br>
+    <select class="inputs" name="input_city" id="selection_city" >
+        <option value="0"></option>
+    </select>
+    <br>
+    <input class="inputs" type="text" name="state" id="state" placeholder="State / Region / Province" >
+    <br>
+    <input class="inputs" type="text" name="zip" id="zip" placeholder="Zip Code" >
+    <br>
+    <input class="inputs" type="text" name="ad1" id="ad1" placeholder="Address 1" >
+    <br>
+    <input class="inputs" type="text" name="ad2" id="ad2" placeholder="Address 2" >
+
+    </div>
+    <div class="direita">
+        <h3>Contact Info</h3>
+        
+        <input class="inputs" type="text" name="name" id="name" placeholder="First Name">
+        <input class="inputs" type="text" name="lastname" id="lastname" placeholder="Last Name">
+        <input class="inputs"  type="email" name="email" id="email" placeholder="Email">
+        <input class="inputs"  type="tel" name="phone" id="phone" placeholder="Phone">
+
+<div class="clear"></div>
+
+ <h3>Shipping Method</h3>
+        <div class="container">
+           
+        
+        <div class="shipping">
+            <input type="radio" name="s_input" id="s_input">$10 Standard
+            <br>
+            <span>(2 - 3 weeks)</span>
+        </div>
+        <div class="shipping">
+            <input type="radio" name="u_input" id="u_input">$20 Ultraspeed
+            <br>
+            <span>(1 week)</span>
+        </div>
+</div>
+ <button type="submit">Payment Method</button>
+    </form>
+    </div>
+    </div>
+    </section>
+    <script src="js/carrinho.js"></script>
+</body>
+</html>
