@@ -71,7 +71,7 @@ function listarProdutos(){
     }
 
     document.getElementById("products").innerHTML = template;
-    document.getElementById("total-geral").innerHTML = "Subtotal: <strong>R$" + totalGeral + "</strong>";
+    document.getElementById("total-geral").innerHTML = totalGeral;
     //  R$523
 }
 
@@ -89,7 +89,8 @@ function atualizarQuantidade(_codigo, _qtd){
 
             document.getElementById(codProd).innerHTML = "<strong>R$ </strong>"+totalProduto.toFixed(2);
             //atualizar o total geral
-            console.log(produtos[index]);
+            console.log(document.getElementById('total-geral').innerHTML);
+            // document.getElementById(codProd).innerHTML = "DSDSDS";
             break;
         }        
 
