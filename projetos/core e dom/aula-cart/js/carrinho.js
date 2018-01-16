@@ -66,7 +66,7 @@ function listarProdutos(){
         template +=     '<span id="p1" class="product__name">'+produtos[i].descricao+'</span>';
         template +=     '<span id="c1" class="product__color">'+produtos[i].cor+'</span>';
         template +=     '<span id="s1" class="product__size"></span>';
-        template +=     '<span id="v1" class="product__value"><strong>R$ </strong>'+produtos[i].preco+'</span>*<input type="number" onchange="atualizarQuantidade(this.id, this.value)" value="'+produtos[i].qtd+'" name="" id="'+produtos[i].codigo+'"> = <span id="total-'+produtos[i].codigo+'"> <strong>R$ </strong>'+totalProduto+'</span>';
+        template +=     '<span id="v1" class="product__value"><strong>R$ </strong>'+produtos[i].preco+'</span>*<input type="number" onchange="atualizarQuantidade(this.id, this.value)" value="'+produtos[i].qtd+'" name="" id="'+produtos[i].codigo+'"> = <strong>R$ </strong><span id="total-'+produtos[i].codigo+'">'+totalProduto+'</span>';
         template += '</div>';
     }
 
@@ -76,7 +76,8 @@ function listarProdutos(){
 }
 
 function atualizarQuantidade(_codigo, _qtd){
-    
+    var totalGeral = parseFloat(document.getElementById('total-geral').innerHTML);
+    console.log(totalGeral);
     for (var index = 0; index < produtos.length; index++) {
         
         if( produtos[index].codigo == _codigo ){
@@ -84,12 +85,21 @@ function atualizarQuantidade(_codigo, _qtd){
             produtos[index].qtd = _qtd;
             
             //atualizar o total do produto
-            var totalProduto = produtos[index].qtd * produtos[index].preco;
+            var novoTotal = parseFloat(produtos[index].qtd * produtos[index].preco);
+            console.log(novoTotal);
             var codProd = 'total-' + produtos[index].codigo;
-
-            document.getElementById(codProd).innerHTML = "<strong>R$ </strong>"+totalProduto.toFixed(2);
+            var totalAntigo = document.getElementById(codProd).innerHTML;
+            console.log(totalAntigo);
+            totalGeral = (totalGeral - totalAntigo) + novoTotal;
+            
+            document.getElementById(codProd).innerHTML = novoTotal.toFixed(2);
             //atualizar o total geral
-            console.log(document.getElementById('total-geral').innerHTML);
+            document.getElementById('total-geral').innerHTML = totalGeral.toFixed(2);
+            
+            //(TOTAL-GERAL - TOTAL-PRODUTO-ANTIGO) + NOVO-TOTAL-PRODUTO
+
+
+            
             // document.getElementById(codProd).innerHTML = "DSDSDS";
             break;
         }        
