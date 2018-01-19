@@ -9,16 +9,21 @@
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
 }
 
+.note + .note {
+    margin-left: 1rem;
+}
+
 .note__title {
     font-weight: bold;
 }
 
 .note__title, .note__body {
     font-size: 14px;
+    outline: 0;
     display: block;
     width: 100%;
     padding: 0;
-    margin: 0;
+    margin: 0 0 .3rem;
     border: 0;
     background: rgb(255, 255, 141);
 }
@@ -32,12 +37,8 @@
     text-transform: uppercase;
 }
 
-.note + .note {
-    margin-left: 1rem;
-}
-
-#notes {
-    margin-top: 2rem;
+.notes {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }

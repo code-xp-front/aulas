@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Post-it</title>
+    </head>
+    <body>
+        <form class="note">
+            <input class="note__title" type="text" name="title" placeholder="Título" autofocus />
+            <textarea class="note__body" name="body" rows="5" placeholder="Criar uma nota..."></textarea>
+            <button class="note__control" type="button" onclick="onDoneClick(this.form, this.form.nextElementSibling, this.form.title, this.form.body)">
+                Concluído
+            </button>
+        </form>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>JS Notes</title>
-</head>
+        <section class="notes"></section>
 
-<body>
-    <form class="note">
-        <input class="note__title" type="text" name="title" placeholder="Título" />
-        <textarea class="note__body" name="body" rows="5" placeholder="Criar uma nota..."></textarea>
-        <button class="note__control" type="button" onclick="onDoneClick(this.form, this.form.title, this.form.body)">
-            Concluído
-        </button>
-    </form>
-    <section id="notes"></section>
-
-    <script src="js/scripts.js"></script>
-</body>
-
+        <script src="js/scripts.js"></script>
+    </body>
 </html>

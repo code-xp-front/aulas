@@ -1,23 +1,22 @@
 var notes = [];
 
-function updateNotesList() {
-    var sectionNotes = document.getElementById("notes");
+function updateView(section) {
     var innerHTML = "";
 
     for (var index = 0; index < notes.length; index++) {
-        innerHTML += '<div class="note">'+
-                        '<button class="note__control" type="button" onclick="onRemoveClick(' + index + ')">' +
+        innerHTML += '<form class="note">'+
+                        '<button class="note__control" type="button" onclick="onRemoveClick(this.form.parentElement, ' + index + ')">' +
                             '<i class="fa fa-times" aria-hidden="true"></i>' +
                         '</button>' +
                          '<h1 class="note__title">' + notes[index].title + '</h1>' +
                          '<p class="note__body">' + notes[index].body + '</p>' +
-                     '</div>';
+                     '</form>';
     }
 
-    sectionNotes.innerHTML = innerHTML;
+    section.innerHTML = innerHTML;
 }
 
-function onDoneClick(form, inputTitle, textAreaBody) {
+function onDoneClick(form, section, inputTitle, textAreaBody) {
     // criar uma nota
     var note = {
         title: inputTitle.value,
@@ -27,17 +26,17 @@ function onDoneClick(form, inputTitle, textAreaBody) {
     // adicionar a nota
     notes.push(note);
 
-    // atualizar lista na tela
-    updateNotesList();
+    // atualizar a tela
+    updateView(section);
 
     //limpar o formulario
     form.reset();
 }
 
-function onRemoveClick(index) {
-    // remover a nota nota
+function onRemoveClick(section, index) {
+    // remover a nota
     notes.splice(index, 1);
 
-    // atualizar lista na tela
-    updateNotesList();
+    // atualizar a tela
+    updateView(section);
 }
