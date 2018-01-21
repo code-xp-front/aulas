@@ -1,6 +1,6 @@
 var notes = [];
 
-function updateView(section) {
+function updateSection(section) {
     var innerHTML = "";
 
     for (var index = 0; index < notes.length; index++) {
@@ -38,7 +38,7 @@ function onDoneClick(form, section, inputTitle, textAreaBody, index) {
         notes.push(note);
 
         // atualizar a tela
-        updateView(section);
+        updateSection(section);
 
         //limpar o formulario
         form.reset();
@@ -49,7 +49,7 @@ function onDoneClick(form, section, inputTitle, textAreaBody, index) {
         notes[index].editing = false;
 
         // atualizar a tela
-        updateView(section);
+        updateSection(section);
     }
 }
 
@@ -58,7 +58,7 @@ function onRemoveClick(section, index) {
     notes.splice(index, 1);
 
     // atualizar a tela
-    updateView(section);
+    updateSection(section);
 }
 
 function onEditClick(section, index) {
@@ -66,5 +66,5 @@ function onEditClick(section, index) {
     notes[index].editing = true;
 
     // atualizar a tela
-    updateView(section);
+    updateSection(section);
 }
