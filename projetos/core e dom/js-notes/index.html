@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>***JS NOTES***</title>
+	
+	<link rel="stylesheet" href="./css/fonts/awesome/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<header class="">
+		<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+		<h1><a href="#">JS NOTES</a></h1>
+		<form action="" method="post">
+			<label for="pesquisar"><i class="fa fa-search fa-lg" aria-hidden="true" id="pesquisar-icon"></i></label>
+			<input type="text" id="pesquisar" name="pesquisar" placeholder="PESQUISAR">
+		</form>
+		<nav>
+			<ul>
+				<li><a href="#"><i class="fa fa-repeat fa-lg" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+				<li><a href="#" id="testerFuncion"><i class="fa fa-user fa-lg" aria-hidden="true"></i></a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<!--*********************** NOVA NOTA ***********************-->
+		<section id="nova-nota">
+			<div id="criar">
+			<form action="">
+			<fieldset id="notas">
+			<legend>CADASTRO DE NOTAS</legend>
+				
+				<label for="titulo">TÍTULO</label>
+				<input type="text" id="titulo">
+
+			
+				<fieldset id="nota-itens">
+				<legend>ITENS</legend>
+				<!--********************* NOVOS ITENS *********************-->	
+					<h4 id="mais-item">
+						<i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i>
+					</h4>
+					
+					<div id="div-new">
+						<div id="ultimo" class="clear"></div>
+					</div>
+					
+					<input type="button" class="salvar" id="limpar-nota" value="Limpar">
+					<input type="button" class="salvar" id="salvar-nota" value="Cadastrar s/DOM">
+					<input type="button" class="salvar" id="salvar-nota-dom" value="Cadastrar c/DOM">
+					
+				</fieldset>
+			</fieldset>
+			</form>
+			</div>
+		</section>
+		
+		<section class="notas" id="section-notas">
+			
+
+			
+
+			<div class="clear"></div>
+		</section>
+
+	</main>
+
+	<!-- <footer>Eddy Notes 2017 - Todos os direitos reservador.</footer> -->
+
+	<script src="js/index.js"></script>
+</body>
+</html>
