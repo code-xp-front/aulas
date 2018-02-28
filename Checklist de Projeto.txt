@@ -1,0 +1,9 @@
+1) Configurar ambiente de desenvolvimento (node.js)
+2) Criar repositório de código
+3) Criar projeto inicial
+	- Rota: react-router (npm install, configurar o index.js, usar <Link>/<Redirect />
+	- API: redux, react-redux, redux-thunk, axios	
+4) Protótipo da tela (alta fidelidade)
+5) Componentizar tela (Simples, Composto, Variada, Responsivo)
+6) Deploy
+https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment
