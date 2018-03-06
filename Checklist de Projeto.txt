@@ -1,9 +1,33 @@
 1) Configurar ambiente de desenvolvimento (node.js)
-2) Criar reposit髍io de c骴igo
+2) Criar reposit贸rio de c贸digo
 3) Criar projeto inicial
 	- Rota: react-router (npm install, configurar o index.js, usar <Link>/<Redirect />
 	- API: redux, react-redux, redux-thunk, axios	
-4) Prot髏ipo da tela (alta fidelidade)
+4) Prot贸tipo da tela (alta fidelidade)
 5) Componentizar tela (Simples, Composto, Variada, Responsivo)
 6) Deploy
 https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment
+
+
+Links das dicas:
+
+- regex e-mail:
+https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+
+- classnames:
+https://github.com/JedWatson/classnames
+
+- storybook:
+https://storybook.js.org/basics/guide-react/
+https://storybook.js.org/basics/writing-stories/
+
+- heroku:
+https://signup.heroku.com/?c=7013A000001yL5XQAU
+https://github.com/mars/create-react-app-buildpack
+https://devcenter.heroku.com/articles/collaborating
+
+a) criar conta
+b) fazer login
+c) adicionar reposit贸rio do heroku
+d) fazer push
+e) convidar colaborador
